@@ -1,4 +1,4 @@
-![ansible-galaxy gimoh.docker-nginx-proxy](https://img.shields.io/badge/ansible--galaxy-gimoh.docker--nginx--proxy-brightgreen.svg) ![License GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)
+![ansible-galaxy gimoh.docker_nginx_proxy](https://img.shields.io/badge/ansible--galaxy-gimoh.docker__nginx__proxy-brightgreen.svg) ![License GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)
 
 Role Name
 =========
@@ -52,7 +52,7 @@ This demonstrates how to deploy the image on a base Ubuntu server:
       roles:
          - willshersystems.apt
          - angstwad.docker_ubuntu
-         - gimoh.docker-nginx-proxy
+         - gimoh.docker_nginx_proxy
 
 License
 -------
