@@ -1,0 +1,21 @@
+---
+# tasks file for docker_nginx_proxy
+- name: ensure directory for TLS certs for proxied containers exists
+  sudo: true
+  file:
+    path: "{{ dnp_nginx_certs_dir }}"
+    state: directory
+    owner: root
+    group: ssl-cert
+    mode: 0710
+
+# For accessing containerized services from outside the host using
+# friendly DNS names as well as SSL/TLS termination.
+- name: nginx based reverse proxy
+  docker:
+    image: jwilder/nginx-proxy
+    name: yxorp
+    ports: ['80:80', '443:443']
+    volumes:
+      - "{{ dnp_nginx_certs_dir }}:/etc/nginx/certs"
+      - '/var/run/docker.sock:/tmp/docker.sock'
