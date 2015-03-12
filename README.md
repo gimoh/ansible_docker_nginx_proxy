@@ -10,6 +10,12 @@ docker image.
 This image provides an optional automatic reverse-proxy for any container
 started on the same host.  See description on Docker Hub for details.
 
+I'm using this with role
+[gimoh.docker_container](https://galaxy.ansible.com/list#/roles/3101) which
+wraps `docker` module and creates/starts containers and can optionally mark
+the container to be registered with the proxy provided by this role, as well
+as upload SSL/TLS certificates for use by the proxy.
+
 Requirements
 ------------
 
