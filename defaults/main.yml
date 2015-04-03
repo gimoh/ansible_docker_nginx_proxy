@@ -1,3 +1,4 @@
 ---
 # defaults file for docker_nginx_proxy
 dnp_nginx_certs_dir: /etc/pki/svc-certs
+dnp_nginx_vhost_dir: /etc/nginx-proxy-vhost.d

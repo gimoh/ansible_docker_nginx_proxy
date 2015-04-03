@@ -1,5 +1,8 @@
 ---
 # tasks file for docker_nginx_proxy
+# For accessing containerized services from outside the host using
+# friendly DNS names as well as SSL/TLS termination.
+
 - name: ensure directory for TLS certs for proxied containers exists
   sudo: true
   file:
@@ -9,8 +12,15 @@
     group: ssl-cert
     mode: 0710
 
-# For accessing containerized services from outside the host using
-# friendly DNS names as well as SSL/TLS termination.
+- name: ensure directory for per-vhost nginx configs exists
+  sudo: true
+  file:
+    path: "{{ dnp_nginx_vhost_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
 - name: nginx based reverse proxy
   docker:
     image: jwilder/nginx-proxy

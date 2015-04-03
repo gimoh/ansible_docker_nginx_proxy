@@ -39,6 +39,11 @@ _defaults/main.yml_
 #
 # See description of the jwilder/nginx-proxy docker image for details.
 dnp_nginx_certs_dir: /etc/pki/svc-certs
+
+# Path to directory *on the host* where nginx per-vhost configuration
+# file fragments will be stored.  This path is mounted as a volume into
+# the nginx-proxy container so nginx can access the files.
+dnp_nginx_vhost_dir: /etc/nginx-proxy-vhost.d
 ```
 
 Dependencies
