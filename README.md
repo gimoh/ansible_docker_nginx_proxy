@@ -1,4 +1,4 @@
-![ansible-galaxy gimoh.docker_nginx_proxy](https://img.shields.io/badge/ansible--galaxy-gimoh.docker__nginx__proxy-brightgreen.svg) ![License GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)
+[![ansible-galaxy gimoh.docker_nginx_proxy](https://img.shields.io/badge/ansible--galaxy-gimoh.docker__nginx__proxy-brightgreen.svg)](https://galaxy.ansible.com/list#/roles/3097) [![License GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
 
 Role Name
 =========
