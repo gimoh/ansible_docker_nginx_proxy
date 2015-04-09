@@ -28,4 +28,5 @@
     ports: ['80:80', '443:443']
     volumes:
       - "{{ dnp_nginx_certs_dir }}:/etc/nginx/certs"
+      - "{{ dnp_nginx_vhost_dir }}:/etc/nginx/vhost.d:ro"
       - '/var/run/docker.sock:/tmp/docker.sock'
