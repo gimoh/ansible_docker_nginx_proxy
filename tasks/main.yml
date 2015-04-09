@@ -18,8 +18,8 @@
     path: "{{ dnp_nginx_vhost_dir }}"
     state: directory
     owner: root
-    group: root
-    mode: 0755
+    group: docker
+    mode: 02775
 
 - name: nginx based reverse proxy
   docker:

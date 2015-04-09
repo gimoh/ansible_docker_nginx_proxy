@@ -41,8 +41,10 @@ _defaults/main.yml_
 dnp_nginx_certs_dir: /etc/pki/svc-certs
 
 # Path to directory *on the host* where nginx per-vhost configuration
-# file fragments will be stored.  This path is mounted as a volume into
-# the nginx-proxy container so nginx can access the files.
+# file fragments will be stored.  This directory will be created and
+# group will be set so that users in `docker` group can upload files
+# there.  This path is then mounted as a volume into the nginx-proxy
+# container so nginx can access the files.
 dnp_nginx_vhost_dir: /etc/nginx-proxy-vhost.d
 ```
 
