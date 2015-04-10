@@ -9,8 +9,8 @@
     path: "{{ dnp_nginx_certs_dir }}"
     state: directory
     owner: root
-    group: ssl-cert
-    mode: 0710
+    group: root
+    mode: 0700
 
 - name: ensure directory for per-vhost nginx configs exists
   sudo: true
